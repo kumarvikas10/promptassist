@@ -41,3 +41,4 @@ API folder
 
 Models
 - create userschema
+- create promptSchema
