@@ -4,12 +4,12 @@ import {useState, useEffect} from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Form from '@components/Form';
 
-const editPrompt = () => {
+const EditPrompt = () => {
   const [submitting, SetSubmitting] = useState(false);
   const [post, setPost] = useState({
     prompt: "",
     tag: "",
-  })
+  });
   const searchParams = useSearchParams();
   const promptId = searchParams.get('id');
   const router = useRouter(); // Define router
@@ -60,4 +60,4 @@ const editPrompt = () => {
   )
 }
 
-export default editPrompt;
+export default EditPrompt;
