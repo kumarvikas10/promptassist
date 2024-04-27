@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
 import PromptCard from "./PromptCard";
 
 const PromptCardList = ({ data, handleTagClick }) => {
@@ -18,7 +17,7 @@ const PromptCardList = ({ data, handleTagClick }) => {
   );
 };
 
-const Feed = () => {
+const Feed = ({ updateFeed }) => {
   const [allPosts, setAllPosts] = useState([]);
 
   // Search states
@@ -33,7 +32,7 @@ const Feed = () => {
   
       setAllPosts(data);
     };
-    
+
     fetchPosts();
   }, []);
 
